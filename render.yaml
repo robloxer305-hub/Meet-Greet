@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: Meet-Greet-Server
+    runtime: node
+    buildCommand: cd "MeetnGreet I Backup/server" && npm ci
+    startCommand: cd "MeetnGreet I Backup/server" && npm start
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: CLIENT_ORIGIN
+        value: https://robloxer305-hub.github.io/Meet-Greet
+      - key: MONGODB_URI
+        sync: false
