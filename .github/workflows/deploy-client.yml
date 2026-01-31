@@ -16,12 +16,10 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        working-directory: "MeetnGreet I Backup/client"
-        run: npm ci
+        run: cd "MeetnGreet I Backup/client" && npm ci
 
       - name: Build client
-        working-directory: "MeetnGreet I Backup/client"
-        run: npm run build
+        run: cd "MeetnGreet I Backup/client" && npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
